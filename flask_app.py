@@ -16,13 +16,13 @@ sslify = SSLify(app)
 @app.route('/', methods=['POST', 'GET'])
 def webhook():
     if request.method == 'POST':
-        repo = git.Repo(os.getcwd())
-        origin = repo.remotes.origin
+        repo = git.Repo(os.getcwd() = '/mysite')
+        origin = repo.remotes.originz
 
         origin.pull()
         return 'Updated PythonAnywhere successfully', 200
     else:
-        return 'Hello from Git34!'
+        return 'Hello from Git35!'
 
 if __name__ == '__main__':
     app.run()
