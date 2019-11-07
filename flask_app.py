@@ -10,7 +10,7 @@ sslify = SSLify(app)
 
 @app.route('/')
 def hello_world():
-    return 'Hello from Git19!'
+    return 'Hello from Git20!'
 
 @app.route('/update_server', methods=['POST'])
 def webhook():
@@ -22,3 +22,6 @@ def webhook():
         return 'Updated PythonAnywhere successfully', 200
     else:
         return 'Wrong event type', 400
+
+if __name__ == '__main__':
+    app.run()
