@@ -8,12 +8,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello from Git14!'
+    return 'Hello from Git15!'
 
 @app.route('/update_server', methods=['POST'])
 def webhook():
     if request.method == 'POST':
-        repo = git.Repo('https://github.com/Titan0x16/mysite')
+        repo = git.Repo('')
         origin = repo.remotes.origin
 
         origin.pull()
