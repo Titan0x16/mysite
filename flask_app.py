@@ -10,12 +10,12 @@ sslify = SSLify(app)
 
 @app.route('/')
 def hello_world():
-    return 'Hello from Git18!'
+    return 'Hello from Git19!'
 
 @app.route('/update_server', methods=['POST'])
 def webhook():
     if request.method == 'POST':
-        repo = git.Repo('mysite/')
+        repo = git.Repo()
         origin = repo.remotes.origin
 
         origin.pull()
