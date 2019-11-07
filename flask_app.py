@@ -16,7 +16,8 @@ sslify = SSLify(app)
 @app.route('/', methods=['POST', 'GET'])
 def webhook():
     if request.method == 'POST':
-        repo = git.Repo(os.getcwd() + '/mysite')
+    	filepath = os.path.abspath(os.path.dirname(__file__))
+        repo = git.Repo(filepath)
         origin = repo.remotes.origin
 
         origin.pull()
@@ -24,7 +25,7 @@ def webhook():
     else:
     	path = os.getcwd()
     	path2 = os.path.abspath(os.path.dirname(__file__))
-    	return f'Hello from Git45! {path} {path2}'
+    	return f'Hello from Git46! {path} {path2}'
 
 if __name__ == '__main__':
     app.run()
