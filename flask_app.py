@@ -10,7 +10,7 @@ sslify = SSLify(app)
 
 @app.route('/')
 def hello_world():
-    return 'Hello from Git23!'
+    return 'Hello from Git24!'
 
 @app.route('/update_server', methods=['POST'])
 def webhook():
