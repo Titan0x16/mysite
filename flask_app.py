@@ -21,7 +21,7 @@ def webhook():
         origin.pull()
         return 'Updated PythonAnywhere successfully', 200
     else:
-        return 'Hello from Git31!'
+        return 'Hello from Git32!'
 
 if __name__ == '__main__':
     app.run()
