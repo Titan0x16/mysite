@@ -2,13 +2,15 @@
 # A very simple Flask Hello World app for you to get started with...
 
 from flask import Flask, request
+from flask_sslify import SSLify
 import git
 
 app = Flask(__name__)
+sslify = SSLify(app)
 
 @app.route('/')
 def hello_world():
-    return 'Hello from Git15!'
+    return 'Hello from Git16!'
 
 @app.route('/update_server', methods=['POST'])
 def webhook():
