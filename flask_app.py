@@ -23,7 +23,8 @@ def webhook():
         return 'Updated PythonAnywhere successfully', 200
     else:
     	path = os.getcwd()
-    	return f'Hello from Git44! {path}'
+    	path2 = os.path.abspath(os.path.dirname(__file__))
+    	return f'Hello from Git45! {path} {path2}'
 
 if __name__ == '__main__':
     app.run()
