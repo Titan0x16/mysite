@@ -4,6 +4,7 @@
 from flask import Flask, request
 from flask_sslify import SSLify
 import git
+import os
 
 app = Flask(__name__)
 sslify = SSLify(app)
@@ -15,13 +16,13 @@ sslify = SSLify(app)
 @app.route('/', methods=['POST', 'GET'])
 def webhook():
     if request.method == 'POST':
-        repo = git.Repo('/home/muk60780/mysite/')
+        repo = git.Repo(os.getcwd())
         origin = repo.remotes.origin
 
         origin.pull()
         return 'Updated PythonAnywhere successfully', 200
     else:
-        return 'Hello from Git32!'
+        return 'Hello from Git33!'
 
 if __name__ == '__main__':
     app.run()
