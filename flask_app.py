@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello from Git2!'
+    return 'Hello from Git3!'
 
 @app.route('/update_server', methods=['POST'])
 def webhook():
